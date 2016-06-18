@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset = "utf-8">
+	<title>提示框效果</title>
+	<style>
+	#name li{width:80px;height: 80px;text-align: center;font-family: sans-serif;float: left;list-style-type: none;border:1px gray solid;margin: 5px;vertical-align: middle;padding: 20px;z-index: 3;}
+	ul{padding: 0px;}
+	h2{text-align: center;}
+	#allcontainer{margin: 0px auto;width: 396px;border: 1px black solid;height:463px;}
+	img{position: relative;width: 130px;height: 130px;border: 1px gray solid;display: none;top: 0px;left: 0px;left:-26px;top: -46px;}
+	</style>
+	<script>
+	window.onload = function(){
+		var names = document.getElementsByTagName("li");
+		var heads = document.getElementsByTagName("img");
+		for(var i = 0;i < names.length;i++){
+			names[i].num = i;
+			names[i].onmouseover = function(){
+				heads[this.num].style.display = "block";
+			}
+			names[i].onmouseout = function(){
+				heads[this.num].style.display = "none";
+			}
+		}
+	}
+	</script>
+	</head>
+	<body>
+		<div id = "allcontainer">
+			<h2>鼠标移过显示头像</h2>
+			<div id = "name">
+				<ul>
+					<li>CHEN<img src = "img/chen.jpg" alt = "chen"  ></li>
+					<li>DS<img src = "img/ds.jpg" alt = "ds"  ></li>
+					<li>TS<img src = "img/ts.jpg" alt = "ts"  ></li>
+					<li>DOOM<img src = "img/doom.jpg" alt = "doom"  ></li>
+					<li>INVOKER<img src = "img/invoker.jpg" alt = "invoker"  ></li>
+					<li>DP<img src = "img/dp.jpg" alt = "dp"  ></li>
+					<li>WR<img src = "img/wr.jpg" alt = "wr"  ></li>
+					<li>DZ<img src = "img/dz.jpg" alt = "dz"  ></li>
+					<li>TH<img src = "img/th.jpg" alt = "th"  ></li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>

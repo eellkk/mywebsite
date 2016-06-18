@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset = "utf-8">
+	<title>title</title>
+	<style>
+	#months ul{padding: 0px;font-family: sans-serif;}
+	#allcontainer{width: 496px;margin: 0px auto;background: #ccc;}
+	#months li{list-style-type: none;float: left;width: 120px;background: black;font-size: 45px;color: white;text-align: center;border:2px white solid;}
+	#months{width: 496px;height:376px;}
+	#monthinfo{background: gray;width: 480px;height:200px;margin: 10px auto;}
+	.current{display: block;}
+	p{display: none;padding: 30px;font-family: sans-serif;}
+	</style>
+	<script>
+	window.onload = function(){
+		var now = new Date()
+		var months = document.getElementsByTagName("li");
+		var monthinfo = document.getElementsByTagName("p");
+		var monthdiv = document.getElementById("months");
+		monthinfo[now.getMonth()].className = "current";
+		months[now.getMonth()].style.background = "green";
+		monthdiv.onmouseout = function(){
+			monthinfo[now.getMonth()].style.display = "block";
+			months[now.getMonth()].style.background = "green";
+		}
+		for(var i = 0;i < months.length;i++){
+			months[i].num = i;
+			months[i].onmouseover = function(){
+				if(this.num != now.getMonth()){
+				monthinfo[now.getMonth()].style.display = "none";
+				months[now.getMonth()].style.background = "black";
+				months[this.num].style.background = "green";	
+				monthinfo[this.num].style.display = "block";
+			}else if(monthinfo[now.getMonth()].style.display == "none" || months[now.getMonth()].style.background == "black"){
+				months[now.getMonth()].style.background = "green";
+				monthinfo[now.getMonth()].style.display = "block";
+				
+			}
+				}
+			months[i].onmouseout = function(){
+				monthinfo[this.num].style.display = "none";
+				months[this.num].style.background = "black";
+			}
+		}
+	}
+	</script>
+	</head>
+	<body>
+		<div id = "allcontainer">
+			<div id = "months">
+				<ul>
+					<li>1</br>JAN</li>
+					<li>2</br>FEB</li>
+					<li>3</br>MAR</li>
+					<li>4</br>APR</li>
+					<li>5</br>MAY</li>
+					<li>6</br>JUN</li>
+					<li>7</br>JUL</li>
+					<li>8</br>AUG</li>
+					<li>9</br>SEP</li>
+					<li>10</br>OCT</li>
+					<li>11</br>NOV</li>
+					<li>12</br>DEC</li>
+				
+			</div>
+			</ul>
+				<div id = "monthinfo">
+					<p>正月梅花（花神寿阳公主</br> 
+					   一树开来冰雪香，谁家新拭岁寒妆？时人不识恒伊曲，信指花神是寿阳。</p>
+					<p>二月杏花（花神杨贵妃）</br> 
+					   柔似浅云初照水，娇如粉蝶扑流霞。一从雨露承恩后，管领春风独此花。</p>
+					<p>三月桃花（花神息夫人）</br> 
+					   粉面凝妆翠黛颦，无言有泪不禁春。花开未是息亡日，偏累纤腰薄命身。</p>      
+					<p>四月牡丹（花神李白）</br> 
+					   春风摇荡羽衣开，未肯瑶池一处栽。皇令欺时花不发，去留谁夺百花魁？</p>
+					<p>五月石榴（花神钟馗）</br> 
+					   烈日烧成一树彤，万花攒动火玲珑。高怀不与春风近，破腹时看肝胆红。</p>
+					<p>六月荷花（花神西施） </br> 
+					   凌波一舞碧罗舒，落月纷纷过眼虚。摇曳芳魂云水畔，莲歌飞入五湖居。</p>
+					<p>七月蜀葵（花神李夫人） </br> 
+					   自惜倾城倾国身，幽姿独立汉家门。金风甫动即归去，懒共寒蝉泣晓昏。</p>
+					<p>八月桂花（花神徐惠） </br> 
+					   青岩照影夜流丹，无那清风点粟盘。自是幽香能暗度，月宫飞去不须看。</p>
+					<p>九月菊花（花神陶渊明）</br> 
+					   本无流蝶逐蜂心，自有清霜明月襟。纵使狂风直吹折，黄花休作落花吟。</p>
+					<p>十月木芙蓉（花神石曼卿）</br> 
+					   清姿直欲挽春归，自著花中三色衣。愁怅未因霜月冷，人间终是负芳菲。</p>
+					<p>十一月山茶（花神白居易）</br> 
+					   行来何处湿青衫？雨自飘零花自酣。沉醉东君呼不起，一枝红泪在江南。</p>
+					<p>十二月水仙（花神娥皇女英）</br> 
+					   金盏银台碧玉茎，白云魂魄水仙名。灵根原在潇湘侧，梦逐苍梧月色清。</p>                        
+			</div>
+			
+		</div>
+	</body>
+</html>

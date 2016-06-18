@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset = "utf-8">
+	<title>鼠标移入转换黑白彩色图片</title>
+	<style>
+	#allcontainer{width: 640px;font-size: 0px;margin: 10px auto;border:1px black solid;padding: 10px;}
+	img{height: 200px;width:200px;border: 1px black solid;opacity: 0.2;margin:5px;cursor:crosshair;}
+	</style>
+	<script>
+	window.onload = function(){
+		var imgs = document.getElementsByTagName("img");
+		for(var i = 0;i < imgs.length;i++){
+			imgs[i].onmouseover = function(){
+				this.style.opacity = 1;
+			}
+			imgs[i].onmouseout = function(){
+				this.style.opacity = 0.2;
+			}
+		}
+	}
+	</script>
+</head>
+<body>
+	<div id = "allcontainer">
+		<img src = "img/th.jpg" alt = "th">
+		<img src = "img/dp.jpg" alt = "dp">
+		<img src = "img/doom.jpg" alt = "doom">
+		<img src = "img/chen.jpg" alt = "chen">
+		<img src = "img/invoker.jpg" alt = "invoker">
+		<img src = "img/ds.jpg" alt = "ds">
+		<img src = "img/dz.jpg" alt = "dz">
+		<img src = "img/ts.jpg" alt = "ts">
+		<img src = "img/wr.jpg" alt = "wr">
+	</div>
+	</body>
+	</html>

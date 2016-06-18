@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset = "utf-8">
+	<title>简易选项卡</title>
+	<style>
+	#allcontainer{width: 500px;margin: 10px auto;}
+	#option{width: 500px;margin: 0px auto;}
+	#option li{list-style-type: none;float: left;background: black;color: white;font-family: sans-serif;padding: 10px;}
+	#option ul{width: 500px;padding: 0px;margin: 0px;height: 41px;background: black; }
+	#project ul{margin: 0px;padding:10px 0px 10px 25px;font-family: sans-serif;}
+	#project{margin: 0px;border: 1px black solid;}
+	#option .current{background: gray;}
+	</style>
+	<script>
+	window.onload = function(){
+		var options = document.getElementById("option").getElementsByTagName("li");
+		var projects = document.getElementById("project").getElementsByTagName("ul");
+		for(var i = 0;i < options.length;i++){
+			options[i].num = i;
+			options[i].onmouseover = function(){
+				for(var j = 0;j < options.length;j++){
+					projects[j].style.display = "none";
+					options[j].className = " ";
+				}
+				projects[this.num].style.display = "block";
+				options[this.num].className = "current";
+			}
+		}
+	}
+	</script>
+	</head>
+	<body>
+		<div id = "allcontainer">
+		<div id = "option">
+				<ul>
+				<li>第一课</li>
+				<li>第二课</li>
+				<li>第三课</li>
+			</ul>
+		</div>
+		<div id = "project">
+			<ul id = "class1" style = "display:block">
+				<li>第一节</li>
+				<li>第二节</li>
+				<li>第三节</li>
+				<li>第四节</li>
+				<li>第五节</li>
+				<li>第六节</li>
+				<li>第七节</li>
+				<li>第八节</li>
+				<li>第九节</li>
+			</ul>
+			<ul id = "class2" style = "display:none">
+				<li>第一节第一节第一节第一节第一节第一节</li>
+				<li>第二节</li>
+				<li>第三节第三节第三节</li>
+				<li>第四节</li>
+				<li>第五节</li>
+				<li>第六节第六节第六节第六节第六节第六节第六节</li>
+				<li>第七节</li>
+				<li>第八节</li>
+				<li>第九节</li>
+			</ul>
+			<ul id = "class3" style = "display:none">
+				<li>第一节第一节第一节第一节第一节第一节</li>
+				<li>第二节</li>
+				<li>第三节第三节第三节</li>
+				<li>第四节</li>
+				<li>第五节</li>
+				<li>第六节第六节第六节第六节第六节第六节第六节</li>
+				<li>第七节</li>
+				<li>第八节</li>
+				<li>第九节</li>
+				<li>第九节</li>
+				<li>第九节</li>
+				<li>第九节</li>
+				<li>第九节</li>
+				<li>第九节</li>
+				<li>第九节</li>
+				<li>第九节</li>
+			</ul>
+		</div>
+	</div>
+	</body>
+</html>

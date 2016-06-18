@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset = "utf-8">
+	<title>用parseInt解析数字并求和</title>
+	<style>
+	#allcontainer{width: 600px;margin: 10px auto;}
+	button{margin: 20px auto;}
+	</style>
+	<script>
+	window.onload = function(){
+		var button = document.getElementById("button");
+		button.onclick = function(){
+			var number1 = document.getElementById("number1").value;
+			var number2 = document.getElementById("number2").value;
+			if(number1 == "" || number2 == "")
+			alert("input number please !");
+			var sum = parseInt(number1) + parseInt(number2);
+			var sumarea = document.getElementById("sum");
+			var text = document.createTextNode(sum);
+
+			sumarea.replaceChild(text,sumarea.firstChild); 
+		}
+		var input = document.getElementsByTagName("input");
+		for(var i = 0;i < input.length;i++){
+		input[i].onkeyup = function(){
+			this.value = this.value.replace(/[^(\d)]/,"");
+		}
+	}
+	}
+	</script>
+	</head>
+	<body>
+		<div id = "allcontainer">
+			<input id = "number1" type = "textarea"></input>  +  
+			<input id = "number2" type = "textarea"></input>  =
+			<span id = "sum">?</span></br>
+			<button id = "button">求和</button>
+		</div>
+	</body>
+</html>

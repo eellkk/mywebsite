@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset = "utf-8">
+	<title>单一按钮显示/隐藏</title>
+	<style>
+	#allcontainer{width: 300px;margin: 0px auto;border: 2px black solid;}
+	ul{padding:0px;margin: 0px;}
+	li{list-style-type: none;background: gray;padding: 5px;border-bottom: 1px black dotted;}
+	p{background: black;color: white;margin: 0px;font-size: 1.5em;cursor: pointer;}
+	</style>
+	<script>
+	window.onload = function(){
+		var button = document.getElementById("button");
+		var thelist = document.getElementById("thelist");
+		button.onclick = function(){
+			if(thelist.style.display == "none")
+			thelist.style.display = "block";
+			else thelist.style.display = "none";
+		}
+	}
+	</script>
+	</head>
+	<body>
+		<div id = "allcontainer">
+			<div id = "button">
+				<p>播放列表</p>
+			</div>
+			<div id = "thelist" style = "display:none">
+				<ul>
+					<li>晴天 - 周杰伦</li>
+					<li>whatshername - greenday</li>
+					<li>41 - coldplay</li>
+					<li>终于等到你 - 莫文蔚</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>

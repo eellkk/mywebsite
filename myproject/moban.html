@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset = "utf-8">
+	<title>点击累加</title>
+	<style>
+	#allcontainer{width: 50px;margin: 10px auto;}
+	</style>
+	<script>
+	window.onload = function(){
+		var button  = document.getElementById("button");
+		button.onclick = function(){
+		var number = parseInt(button.firstChild.nodeValue);
+			button.firstChild.nodeValue = number + 1;
+		}
+	}
+	</script>
+	</head>
+	<body>
+		<div id = "allcontainer">
+			<button id = "button">0</button>
+		</div>
+	</body>
+</html>

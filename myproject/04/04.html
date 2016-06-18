@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>循环控制div变色</title>
+	<style>
+	body{text-align: center}
+	#outer div{margin: 10px;width:30px;height: 30px;background: black;float: left;}
+	#outer{width: 150px;margin: 10px auto;}
+	</style>
+	<script>
+	window.onload = function(){
+		var div = document.getElementById("outer").getElementsByTagName("div");
+		var button = document.getElementById("input");
+		div[0].style.background = "black";
+		button.onclick = function(){
+			if(div[0].style.background == "black"){
+				for(var i = 0;i < div.length;i++) div[i].style.background = "red";
+			}else{
+				for(var j = 0;j < div.length;j++) {
+					div[j].style.background = "black";
+				}
+				button.style.value = "点击还原";
+			}
+		}
+	}
+	</script>
+	</head>
+	<body>
+		<input type = "button" id="input" value="点击变色">
+		<div id="outer">
+		<div></div><div></div><div></div>
+	</div>
+	</body>
+</html>

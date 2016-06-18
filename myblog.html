@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link href="css/myblog.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<header>
+			<nav>
+				<ul>
+					<li><a>项目</a></li>
+					<li><input type="button" id= "testButton" value="测试"></li>
+				</ul>
+			</nav>
+		</header>
+		<div id="allcontainer">
+			<div id = "testdiv">
+			</div>
+			<aside>
+				<ul>
+					<li><a href="myproject/01/01.html" target="iframe_a">js控制div属性</a></li>
+					<li><a href="myproject/02/02.html" target="iframe_a">网页换肤</a></li>
+					<li><a href="myproject/03/03.html" target="iframe_a">js传递参数</a></li>
+					<li><a href="myproject/04/04.html" target="iframe_a">js循环控制div颜色</a></li>
+					<li><a href="myproject/05/05.html" target="iframe_a">鼠标悬浮改变样式</a></li>
+					<li><a href="myproject/06/06.html" target="iframe_a">输入法的选择</a></li>
+					<li><a href="myproject/07/07.html" target="iframe_a">求出输入数字的总和</a></li>
+					<li><a href="myproject/08/08.html" target="iframe_a">弹出层</a></li>
+					<li><a href="myproject/09/09.html" target="iframe_a">输入d改变div属性</a></li>
+					<li><a href="myproject/10/10.html" target="iframe_a">鼠标移入移除改变图片透明度</a></li>
+					<li><a href="myproject/11/11.html" target="iframe_a">简易日历</a></li>
+					<li><a href="myproject/12/12.html" target="iframe_a">简易选项卡</a></li>
+					<li><a href="myproject/13/13.html" target="iframe_a">单一按钮显示/隐藏播放列表</a></li>
+					<li><a href="myproject/14/14.html" target="iframe_a">鼠标移过显示头像</a></li>
+					<li><a href="myproject/15/15.html" target="iframe_a">鼠标移过改变图片路径</a></li>
+					<li><a href="myproject/16/16.html" target="iframe_a">全选与反选</a></li>
+					<li><a href="myproject/17/17.html" target="iframe_a">点击创建一个列表</a></li>
+					<li><a href="myproject/18/18.html" target="iframe_a">parseInt解析数字求和</a></li>
+					<li><a href="myproject/19/19.html" target="iframe_a">单击按钮累加</a></li>
+				</ul>
+				</aside>
+				<section>
+					<iframe src="myproject/01/01.html" name="iframe_a" frameborder = "0" id="iframe_a"></iframe>
+				</section>
+		</div>
+		<div id = "myDiv"> <!-- this is a comment--></div>
+		<script src="js/addLoadEvent.js"></script>
+		<script src="js/test.js"></script>
+		<script>
+		window.onload = function(){
+			var button = document.getElementById("testButton");
+			button.onclick = function(){
+				testFunction();
+			}
+		}
+		</script>
+	</body>
+	</html>

@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset = "utf-8">
+	<title>输入文字控制div属性</title>
+	<style>
+	body{text-align: center;}
+	#thediv{height:300px; width: 300px;background: black;margin: 20px auto;}
+	button{margin-top: 20px;}
+	</style>
+	<script>
+	window.onload = function(){
+		var button = document.getElementsByTagName("button")[0];
+		button.onclick = function(){
+			var color = document.getElementById("color");
+			var width = document.getElementById("width");
+			var height = document.getElementById("height");			
+			var thediv = document.getElementById("thediv");
+			thediv.style.background = color.value;
+			thediv.style.width = width.value + "px";
+			thediv.style.height = height.value + "px";
+			alert(color.value);
+			alert(color.getAttribute("value"));
+		}
+	}
+	</script>
+	</head>
+	<body>
+		<div id = "input">
+		<p>请输入颜色</p>
+		<input type = "text" value = "input color" id = "color">
+		<p>请输入宽度 单位(px)</p>
+		<input type = "text" value = "input width" id = "width">
+		<p>请输入高度 单位(px)</p>
+		<input type = "text" value = "input height" id = "height"></br>
+		<button>确认</button>
+	</div>
+	<div id = "thediv">
+	</div>
+	</body>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>函数接受参数并弹出</title>
+	<style>
+	body{text-align: left;}
+	input{margin: 10px;}
+	button{	margin: 10px 0 0 10px}
+	#tip{display:none;background:yellow;color: red;font-size: 50%;}
+	#input{width:400px;margin:10px auto;}
+	</style>
+	<script>
+	function showInfo(a,b){
+		var info = "城市: "+a.value+"    "+
+				   "姓名: "+b.value;
+		alert(info);
+	}
+	window.onload = function(){
+		var input = document.getElementsByTagName("input");
+		var button = document.getElementsByTagName("button")[0];
+		button.onclick = function(){
+			showInfo(input[0],input[1]);
+		};
+		document.getElementsByTagName("label")[0].onmouseover = function(){
+			document.getElementById("tip").style.display = "inline";
+		};
+		document.getElementsByTagName("label")[0].onmouseout = function(){
+			document.getElementById("tip").style.display = "none";
+		}
+	}
+	</script>
+	</head>
+	<body>
+		<div id="input">
+			<input type="text" value="city"></br>
+			<input type="text" value="name"></br>
+			<label><input type="checkbox">记住我的信息</label>
+			<div id ="tip">为了你的安全，请不要在公众场合勾选</div>
+			</br><button>确定</button>
+		</div>
+	</body>
+</html>

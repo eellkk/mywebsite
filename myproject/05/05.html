@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>js鼠标悬浮改变样式</title>
+	<style>
+
+	</style>
+	<script>
+	window.onload = function(){
+		var thediv = document.getElementById("thediv");
+		var css = document.getElementsByTagName("link")[0];
+		thediv.onmouseover = function(){
+			css.href = "white" + ".css";
+		}
+		thediv.onmouseout = function(){
+			css.href = "black" + ".css";
+		}
+	}
+	</script>
+	<link rel="stylesheet" href="black.css" type="text/css">
+	</head>
+	<body>
+		<div id = "thediv">
+			<p>鼠标移动到色块上改变样式</p>
+		</div>
+	</body>
+</html>

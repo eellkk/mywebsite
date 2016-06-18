@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset = "utf-8">
+	<title>鼠标移过修改图片路径</title>
+	<style>
+	li{list-style-type: none;float: left;padding: 0px;margin: 0px;}
+	img{height: 100px;width: 100px;}
+	#allcontainer{width: 300px;margin: 0px auto;border: 1px gray solid;height: 412px;}
+	ul{padding: 0px;margin: 0px;}
+	#placeholder{width: 200px;height: 200px;}
+	</style>
+	<script>
+	window.onload = function(){
+		var placeholder = document.getElementById("placeholder");
+		var imgs = document.getElementsByTagName("img");
+		for(var i = 1;i < imgs.length;i++){
+			imgs[i].num = i;
+			imgs[i].onmouseover = function(){
+				placeholder.src = imgs[this.num].src;
+			}
+		}
+	}
+	</script>
+	</head>
+	<body>
+		<div id="allcontainer">
+			<ul>
+				<li><img id = "placeholder" src = "img/chen.jpg"></li>
+				<li class = "img"><img src = "img/doom.jpg"></li>
+				<li class = "img"><img src = "img/dp.jpg"></li>
+				<li class = "img"><img src = "img/ds.jpg"></li>
+				<li class = "img"><img src = "img/dz.jpg"></li>
+				<li class = "img"><img src = "img/invoker.jpg"></li>
+				<li class = "img"><img src = "img/th.jpg"></li>
+				<li class = "img"><img src = "img/ts.jpg"></li>
+				<li class = "img"><img src = "img/chen.jpg"></li>
+			</ul>
+		</div>
+	</body>
+</html>

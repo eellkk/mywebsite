@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset = "utf-8">
+	<title>全选复选</title>
+	<style>
+	#allcontainer{width:300px; margin: auto;border: 1px gray solid;padding: 20px;text-align: center;}
+	li{list-style-type: none;padding: 0px;}
+	ul{padding: 0px;}
+	#single{text-align: left;}
+	</style>
+	<script>
+	window.onload = function(){
+		var input = document.getElementsByTagName("input");
+		var allcheck = document.getElementById("all");
+		var antiall = document.getElementById("antiall");
+		allcheck.onclick = function(){
+			for(var i = 0;i < input.length;i++){
+				input[i].checked = true;
+			}
+		}
+		antiall.onclick = function(){
+			for (var i = 0;i < input.length;i++){
+				if(input[i].checked == true){
+					input[i].checked = false;
+				}else{
+					input[i].checked = true;
+				}
+			}
+		}
+	}
+	</script>
+	</head>
+	<body>
+		<div id = "allcontainer">
+			<div id = "allselect">
+				<button id ="all">全选</button> <button id = "antiall">反选</button>
+			</div>
+			<div id ="single">
+				<ul>
+					<li><input type = "checkbox">1</li>
+					<li><input type = "checkbox">1</li>
+					<li><input type = "checkbox">1</li>
+					<li><input type = "checkbox">1</li>
+					<li><input type = "checkbox">1</li>
+					<li><input type = "checkbox">1</li>
+					<li><input type = "checkbox">1</li>
+					<li><input type = "checkbox">1</li>
+					<li><input type = "checkbox">1</li>
+					<li><input type = "checkbox">1</li>
+					<li><input type = "checkbox">1</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>
